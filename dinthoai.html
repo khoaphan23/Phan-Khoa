@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    
+    <form name="cFrm" class="container mx-auto">
+        <div class="grid grid-cols-3">
+            <div>
+                <label for="productName">Product Name</label>
+                <input type="text" name="productName" id="productName" class="border border-black mt-2" />
+            </div>
+            <div>
+                <label for="productImage">Product Image</label>
+                <input type="file" name="productImage" id="productImage" class="mt-2" />
+            </div>
+            <div>
+                <label for="productPrice">Product Price</label>
+                <input type="number" name="productPrice" id="productPrice" class="border border-black mt-2" />
+            </div>
+        </div>
+        <div class="flex mt-5 gap-3">
+            <button 
+                type="button" 
+                class="text-white px-2.5 rounded-lg py-1 bg-green-400" 
+                onclick="handleAddProduct()"
+            >
+                Add
+            </button>
+            
+        </div>
+    </form>
+    <div class="container mx-auto">
+        <h2 class="mt-5 text-2xl font-semibold">Điện thoại nổi bật nhất</h2>
+        <ul class="grid grid-cols-4 mt-4 gap-2.5" id="dienthoai"></ul>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
